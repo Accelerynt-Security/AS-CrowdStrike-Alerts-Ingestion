@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "metadata": {
+        "title": "Data Collection Endpoint for CrowdStrike Alerts",
+        "description": "Creates a Data Collection Endpoint (DCE) for ingesting CrowdStrike Falcon alerts data.",
+        "prerequisites": [],
+        "lastUpdateTime": "2025-01-13T00:00:00Z",
+        "support": {
+            "tier": "partner"
+        },
+        "author": {
+            "name": "Accelerynt"
+        }
+    },
+    "parameters": {
+        "DataCollectionEndpointName": {
+            "type": "string",
+            "defaultValue": "dce-crowdstrike-alerts",
+            "metadata": {
+                "description": "Name for the Data Collection Endpoint"
+            }
+        },
+        "Location": {
+            "type": "string",
+            "metadata": {
+                "description": "Azure region for the DCE deployment"
+            }
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Insights/dataCollectionEndpoints",
+            "apiVersion": "2022-06-01",
+            "name": "[parameters('DataCollectionEndpointName')]",
+            "location": "[parameters('Location')]",
+            "properties": {
+                "networkAcls": {
+                    "publicNetworkAccess": "Enabled"
+                },
+                "description": "Data Collection Endpoint for CrowdStrike Falcon Alerts ingestion"
+            }
+        }
+    ],
+    "outputs": {
+        "dataCollectionEndpointName": {
+            "type": "string",
+            "value": "[parameters('DataCollectionEndpointName')]"
+        },
+        "dataCollectionEndpointId": {
+            "type": "string",
+            "value": "[resourceId('Microsoft.Insights/dataCollectionEndpoints', parameters('DataCollectionEndpointName'))]"
+        },
+        "logsIngestionEndpoint": {
+            "type": "string",
+            "value": "[reference(resourceId('Microsoft.Insights/dataCollectionEndpoints', parameters('DataCollectionEndpointName'))).logsIngestion.endpoint]"
+        },
+        "immutableId": {
+            "type": "string",
+            "value": "[reference(resourceId('Microsoft.Insights/dataCollectionEndpoints', parameters('DataCollectionEndpointName'))).immutableId]"
+        }
+    }
+}
