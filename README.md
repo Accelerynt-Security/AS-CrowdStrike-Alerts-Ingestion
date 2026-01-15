@@ -296,19 +296,16 @@ Navigate to the "**Review + assign**" section and click "**Review + assign**".
 
 The playbook uses the Azure Monitor Logs API connection for deduplication queries. This connection must be authorized after deployment.
 
-Navigate to the Logic App and click "**API connections**" in the left menu under "**Development Tools**".
+Navigate to the Logic App and click "**API connections**" in the left menu under "**Development Tools**". Click on the "**azuremonitorlogs-AS-CrowdStrike-Alerts-Ingestion**" connection.
 
 ![CrowdStrike_Alerts_Integration_API_Connection_1](Images/CrowdStrike_Alerts_Integration_API_Connection_1.png)
 
-Click on the "**azuremonitorlogs-AS-CrowdStrike-Alerts-Ingestion**" connection.
+Click "**Edit API connection**" in the left menu, then click "**Authorize**". Sign in with an account that has access to the Log Analytics workspace.
 
 ![CrowdStrike_Alerts_Integration_API_Connection_2](Images/CrowdStrike_Alerts_Integration_API_Connection_2.png)
 
-Click "**Edit API connection**" in the left menu, then click "**Authorize**". Sign in with an account that has access to the Log Analytics workspace.
-
-![CrowdStrike_Alerts_Integration_API_Connection_3](Images/CrowdStrike_Alerts_Integration_API_Connection_3.png)
-
 Click "**Save**".
+![CrowdStrike_Alerts_Integration_API_Connection_3](Images/CrowdStrike_Alerts_Integration_API_Connection_3.png)
 
 > [!IMPORTANT]  
 > Each of the role assignments may take some time to propagate. If your Logic App is not running successfully immediately after the Role Assignments, please allow up to 10 minutes before retrying.
