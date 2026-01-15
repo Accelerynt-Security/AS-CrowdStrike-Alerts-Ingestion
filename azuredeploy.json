@@ -246,7 +246,7 @@
                                             "resourcegroups": "[resourceGroup().name]",
                                             "resourcename": "[parameters('LogAnalyticsWorkspaceName')]",
                                             "resourcetype": "Log Analytics Workspace",
-                                            "subscriptions": "[subscription().subscription]"
+                                            "subscriptions": "[subscription().subscriptionId]"
                                 }
                             },
                             "runAfter": {
