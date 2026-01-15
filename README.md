@@ -58,10 +58,6 @@ Choose a name for the secret, such as "**AS-CrowdStrike-Integration-Client-Secre
 
 ![CrowdStrike_Alerts_Integration_Key_Vault_2](Images/CrowdStrike_Alerts_Integration_Key_Vault_2.png)
 
-Once the secret has been added to the vault, navigate to the "**Access control (IAM)**" menu option on the Key Vault page menu. Leave this page open, as you will need to return to it once the playbook has been deployed. See [Granting Access to Azure Key Vault](https://github.com/Accelerynt-Security/AS-CrowdStrike-Alerts-Ingestion#granting-access-to-azure-key-vault).
-
-![CrowdStrike_Alerts_Integration_Key_Vault_3](Images/CrowdStrike_Alerts_Integration_Key_Vault_3.png)
-
 
 #### Log Analytics Workspace
 
