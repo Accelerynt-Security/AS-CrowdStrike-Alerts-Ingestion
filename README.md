@@ -489,3 +489,4 @@ Additionally, the Azure Monitor Logs API connection must be authorized with an a
 - The deduplication query checks against alerts from the last 180 days
 - Ensure the custom table exists and is accessible
 - Verify the Azure Monitor Logs connection is properly authorized
+- Ensure the data from the previous run is populating in the Custom Logs before the next run begins
