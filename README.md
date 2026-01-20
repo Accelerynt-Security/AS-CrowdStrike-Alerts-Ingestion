@@ -319,11 +319,6 @@ To execute the initial run manually, navigate to the Logic App overview page and
 
 Click on the run to view the execution details. Verify that all steps completed successfully, particularly the "**HTTP_-_Send_To_DCR**" step.
 
-> [!IMPORTANT]  
-> The data sent from the initial run may take longer than the five minute recurrence window to populate in the **CrowdStrike_Alerts_CL** table. To ensure duplicate records are not created on the second run, it is advised to **Disable** the Logic App until results have populated.
-
-![CrowdStrike_Alerts_Integration_Initial_Run_1](Images/CrowdStrike_Alerts_Integration_Initial_Run_1.png)
-
 #
 ### Viewing Custom Logs
 
