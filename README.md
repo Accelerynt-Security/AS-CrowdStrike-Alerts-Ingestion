@@ -4,7 +4,7 @@ Author: Accelerynt
 
 For any technical questions, please contact info@accelerynt.com    
 
-This playbook will create a unidirectional integration with Microsoft Sentinel. It will pull CrowdStrike alerts into a Microsoft Sentinel custom log table where they can be tracked, queried, and correlated with other security data. The playbook includes built-in deduplication to prevent duplicate alerts.
+This playbook will create a unidirectional integration with Microsoft Sentinel. It will pull CrowdStrike alerts into a Microsoft Sentinel custom log table where they can be tracked, queried, and correlated with other security data. The playbook includes built-in deduplication to prevent duplicate alerts. This uses the updated Microsoft DCR, DCE, and newer log tables.
 
 ![CrowdStrike_Alerts_Integration_Demo_1](Images/CrowdStrike_Alerts_Integration_Demo_1.png)
 
